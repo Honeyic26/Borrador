@@ -53,18 +53,15 @@ body {
 /* Estilos para la carta */
 .carta {
   margin: 60px auto;
-  background-color: #ffe4e8; /* rosa suave */
+  background-color: #ffe4e8; /* fondo rosa suave */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   text-align: left;
   color: #333;
-  min-height: 300px; /* Para que no se vea tan pequeño */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Ajusta si quieres que el contenido esté arriba */
 }
+
 .carta h1 {
   color: #e91e63;
   font-size: 2.2em;
