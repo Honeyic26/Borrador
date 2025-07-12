@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: white;
+  background-color: #ffe0ec; /* rosa suave */
   color: #333;
   text-align: center;
 }
@@ -52,7 +52,7 @@ body {
 }
 /* Estilos para la carta */
 .carta {
-  margin: 60px auto;
+  margin: 20px auto;
   background: white; 
   padding: 30px;
   border-radius: 15px;
