@@ -2,9 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ffe0ec; /* rosa suave */
+  background-color: #ffe0ec;
   color: #333;
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos para la pantalla de bienvenida */
@@ -80,11 +83,17 @@ body {
 
 @media (max-width: 768px) {
   .carta {
-    max-width: 90%;
-    min-height: auto;
-    padding: 20px;
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  body {
+    align-items: flex-start;
+    padding-top: 40px;
   }
 }
+
 
 /* Animación para que la carta aparezca suave */
 @keyframes fadeInUp {
