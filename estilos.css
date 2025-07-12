@@ -53,21 +53,21 @@ body {
 .botones button:hover {
   background-color: #d81b60;
 }
+
 /* Estilos para la carta */
 .carta {
   margin: 60px auto;
   background: white;
-  padding: 40px 50px; /* un poco más de espacio dentro */
+  padding: 40px 50px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  max-width: 700px;  /* ancho más grande */
-  min-height: 500px; /* altura fija para que parezca cuadrado */
+  max-width: 700px;
+  min-height: 500px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* para centrar contenido verticalmente */
+  justify-content: center;
 }
-
 
 .carta h1 {
   color: #e91e63;
@@ -93,6 +93,7 @@ body {
     padding-top: 40px;
   }
 }
+
 .mensaje-oculto {
   position: fixed;
   top: 50%;
@@ -108,7 +109,6 @@ body {
   display: none;
   text-align: center;
 }
-
 
 /* Animación para que la carta aparezca suave */
 @keyframes fadeInUp {
