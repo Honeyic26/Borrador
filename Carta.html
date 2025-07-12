@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Aquí va todo el contenido visible de la página -->
+  <!-- Pantalla de bienvenida -->
+<div id="bienvenida" class="pantalla-bienvenida">
+  <img src="imagenes/Amor.jpg" alt="romantico" />
+  <h1>¿Quieres leer mi carta para ti?</h1>
+  <div class="botones">
+    <button onclick="mostrarCarta()">Sí</button>
+    <button onclick="alert('Bueno... aquí estaré esperándote')">No</button>
+  </div>
+</div>
+<!-- Carta (oculta al inicio) -->
+<div id="contenido-carta" class="carta" style="display: none;">
+  <h1>Para la chica que amo</h1>
+  <p>
+    Te quiero muchisimo, eres todo para mi y es algo lo cual nunca me cansaré de decirte, amo amarte<br>
+     me encanta estar contigo, hablar contigo, dormir contigo, en serio que quiero hacerte feliz, quiero hacerte bien, muak<br>
+   Gracias mi niña hermosa
+  </p>
+</div>
+<script>
+  function mostrarCarta() {
+    document.getElementById('bienvenida').style.display = 'none';
+    const carta = document.getElementById('contenido-carta');
+    carta.style.display = 'block';
+    carta.classList.add('fadeInUp');
+  }
+</script>
+</body>
+</html>

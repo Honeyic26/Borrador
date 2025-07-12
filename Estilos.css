@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffe0ec, #ffffff);
+  color: #333;
+  text-align: center;
+}
+
+/* Estilos para la pantalla de bienvenida */
+.pantalla-bienvenida {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffe0ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.pantalla-bienvenida img {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.pantalla-bienvenida h1 {
+  font-size: 1.8em;
+  color: #e91e63;
+}
+
+.botones button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.botones button:hover {
+  background-color: #d81b60;
+}
+/* Estilos para la carta */
+.carta {
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: left;
+  color: #333;
+}
+
+.carta h1 {
+  color: #e91e63;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.carta p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+/* Animación para que la carta aparezca suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
