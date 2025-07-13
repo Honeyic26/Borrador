@@ -27,7 +27,7 @@ body {
 }
 
 .pantalla-bienvenida img {
-  width: 400px;
+  width: 500px;
   height: auto;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -39,7 +39,7 @@ body {
 }
 
 .botones button {
-  margin: 10px;
+  margin: 20px;
   padding: 10px 20px;
   background-color: #e91e63;
   color: white;
