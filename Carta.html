@@ -34,35 +34,58 @@
 
 <script>
   function mostrarCarta() {
-  // Oculta bienvenida y ventana "No"
   document.getElementById('bienvenida').style.display = 'none';
   document.getElementById('ventana-no').style.display = 'none';
 
-  // Muestra la carta
   const carta = document.getElementById('contenido-carta');
   carta.style.display = 'block';
   carta.classList.add('fadeIn');
 
-  // Agrega estado para botón atrás
   history.pushState({pantalla: 'carta'}, '', '#carta');
 }
 
 function mostrarMensaje() {
-  // Oculta bienvenida y carta
   document.getElementById('bienvenida').style.display = 'none';
   document.getElementById('contenido-carta').style.display = 'none';
 
-  // Muestra ventana "No" con animación
   const ventana = document.getElementById('ventana-no');
   ventana.style.display = 'block';
   ventana.classList.add('fadeIn');
+
+  history.pushState({pantalla: 'no'}, '', '#no');
 }
 
 function cerrarVentanaNo() {
   const ventana = document.getElementById('ventana-no');
   ventana.style.display = 'none';
-  ventana.classList.remove('fadeIn'); // Por si quieres mostrarla de nuevo más adelante
+  ventana.classList.remove('fadeIn');
+
+  // Mostrar bienvenida otra vez
+  document.getElementById('bienvenida').style.display = 'flex';
+
+  // Actualizar historial para que botón atrás no saque de la página
+  history.pushState({pantalla: 'inicio'}, '', location.pathname);
 }
+
+window.onload = () => {
+  history.replaceState({pantalla: 'inicio'}, '', location.pathname);
+};
+
+window.addEventListener('popstate', (event) => {
+  if (!event.state || event.state.pantalla === 'inicio') {
+    document.getElementById('bienvenida').style.display = 'flex';
+    document.getElementById('contenido-carta').style.display = 'none';
+    document.getElementById('ventana-no').style.display = 'none';
+  } else if (event.state.pantalla === 'carta') {
+    document.getElementById('bienvenida').style.display = 'none';
+    document.getElementById('contenido-carta').style.display = 'block';
+    document.getElementById('ventana-no').style.display = 'none';
+  } else if (event.state.pantalla === 'no') {
+    document.getElementById('bienvenida').style.display = 'none';
+    document.getElementById('contenido-carta').style.display = 'none';
+    document.getElementById('ventana-no').style.display = 'block';
+  }
+});
 
 </script>
 </body>
