@@ -139,6 +139,46 @@ body {
   text-align: center;
 }
 
+.ventana-no {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff0f6;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 3000;
+  display: none;
+  max-width: 90vw;
+  width: 400px;
+}
+
+.ventana-no img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.ventana-no p {
+  font-size: 1.2em;
+  color: #e91e63;
+}
+
+.ventana-no button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
 /* Animación para que la carta aparezca suave */
 @keyframes fadeIn {
   from {
