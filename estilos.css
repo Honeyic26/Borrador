@@ -82,17 +82,21 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 40px 50px;
+  padding: 50px 40px; /* más espacio interno */
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  max-width: 700px;
-  min-height: 500px;
+  max-width: 90vw;       /* 90% del ancho de la pantalla */
+  width: 600px;          /* tamaño base en pantallas normales */
+  min-height: 60vh;      /* ocupa buena parte de la altura */
   text-align: left;
-  display: none; /* se oculta hasta que des clic */
+  display: none;
   flex-direction: column;
   justify-content: center;
   z-index: 1001;
+  font-size: 1.2em;      /* texto más grande */
+  line-height: 1.6;
 }
+
 
 .carta h1 {
   color: #e91e63;
