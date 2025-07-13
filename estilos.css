@@ -123,22 +123,6 @@ body {
   }
 }
 
-.mensaje-oculto {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  color: #e91e63;
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  font-size: 1.1em;
-  z-index: 2000;
-  display: none;
-  text-align: center;
-}
-
 .ventana-no {
   position: fixed;
   top: 50%;
