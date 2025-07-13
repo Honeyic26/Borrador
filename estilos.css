@@ -65,6 +65,26 @@ body {
   transform: scale(1.05);
 }
 
+.botones-button {
+  padding: 14px 28px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s, transform 0.15s;
+  flex: 1 1 150px;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botones-button:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+
 /* Animación pop (igual que ya tenías) */
 @keyframes pop {
   0%,100% { transform: scale(1); }
