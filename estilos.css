@@ -160,10 +160,11 @@ body {
 }
 
 .ventana-no img {
-  width: 1000px;
-  height: auto;
+  width: 100%;
+  max-height: 480px; /* antes era 250px */
+  object-fit: cover;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .ventana-no h1 {
