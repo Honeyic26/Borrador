@@ -40,28 +40,45 @@ body {
 
 .botones {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* espacio entre botones */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* espaciado entre botones */
+  margin-top: 40px;
 }
 
 .botones button {
-  padding: 16px 30px;
+  padding: 14px 28px;
   background-color: #e91e63;
   color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: background 0.3s, transform 0.2s;
-  width: 80%;
-  max-width: 280px;
+  min-width: 120px;
+  max-width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .botones button:hover {
   background-color: #d81b60;
   transform: scale(1.03);
+}
+
+.pop {
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
