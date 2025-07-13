@@ -160,14 +160,14 @@ body {
 }
 
 .ventana-no img {
-  width: 500px;
+  width: 800px;
   height: auto;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
 .ventana-no p {
-  font-size: 1.8em;
+  font-size: 2.0em;
   color: #e91e63;
 }
 
