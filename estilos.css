@@ -82,20 +82,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 50px 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   width: 90vw;
-  max-width: 800px;
-  height: 80vh;
-  max-height: 90vh;
-  overflow-y: auto; /* para que haga scroll si el texto se pasa */
+  max-width: 480px;
+  height: auto;
+  min-height: 300px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
-  font-size: 1.4em;
-  line-height: 1.8;
+  font-size: 1.3em;
+  line-height: 1.6;
   z-index: 1001;
 }
 
