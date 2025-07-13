@@ -34,37 +34,41 @@
 
 <script>
   function mostrarCarta() {
-  // Oculta bienvenida y muestra carta
+  // Oculta bienvenida y ventana "No"
   document.getElementById('bienvenida').style.display = 'none';
+  document.getElementById('ventana-no').style.display = 'none';
+
+  // Muestra la carta
   const carta = document.getElementById('contenido-carta');
   carta.style.display = 'block';
   carta.classList.add('fadeIn');
 
-  // Agrega un estado al historial para que “volver” funcione
+  // Agrega estado para botón atrás
   history.pushState({pantalla: 'carta'}, '', '#carta');
 }
-// Escuchar si el usuario presiona “atrás”
-window.addEventListener('popstate', function(event) {
-  // Si viene del historial, volvemos a mostrar la bienvenida
+
+function mostrarMensaje() {
+  // Oculta bienvenida y carta
+  document.getElementById('bienvenida').style.display = 'none';
   document.getElementById('contenido-carta').style.display = 'none';
-  document.getElementById('bienvenida').style.display = 'flex';
-});
 
-  document.querySelectorAll('.botones button').forEach(btn => {
-  btn.addEventListener('click', function () {
-    btn.classList.add('pop');
-    setTimeout(() => btn.classList.remove('pop'), 300);
-  });
-});
-
-    function mostrarMensaje() {
-  const ventana = document.getElementById('ventana-no');
-  ventana.style.display = 'block';
+  // Muestra ventana "No"
+  document.getElementById('ventana-no').style.display = 'block';
 }
 
 function cerrarVentanaNo() {
-  document.getElementById('ventana-no').style.display = 'none';
+  // Oculta ventana "No" y vuelve a mostrar bienvenida
+  document.getElementById('ventana-no').style.display = 'none';
+  document.getElementById('bienvenida').style.display = 'flex';
 }
+
+// Detectar botón atrás del navegador para volver a bienvenida
+window.addEventListener('popstate', function(event) {
+  document.getElementById('contenido-carta').style.display = 'none';
+  document.getElementById('ventana-no').style.display = 'none';
+  document.getElementById('bienvenida').style.display = 'flex';
+});
+
 </script>
 </body>
 </html>
