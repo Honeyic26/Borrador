@@ -56,10 +56,16 @@ function mostrarMensaje() {
   document.getElementById('ventana-no').style.display = 'block';
 }
 
+function mostrarMensaje() {
+  const ventana = document.getElementById('ventana-no');
+  ventana.style.display = 'block';
+  ventana.classList.add('fadeIn'); // ⬅️ aquí le agregas la animación
+}
+
 function cerrarVentanaNo() {
-  // Oculta ventana "No" y vuelve a mostrar bienvenida
-  document.getElementById('ventana-no').style.display = 'none';
-  document.getElementById('bienvenida').style.display = 'flex';
+  const ventana = document.getElementById('ventana-no');
+  ventana.style.display = 'none';
+  ventana.classList.remove('fadeIn'); // ⬅️ así puedes volver a mostrarla luego
 }
 
 // Detectar botón atrás del navegador para volver a bienvenida
