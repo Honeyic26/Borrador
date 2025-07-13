@@ -56,7 +56,11 @@ body {
 
 /* Estilos para la carta */
 .carta {
-  margin: 60px auto;
+  position: fixed; /* esto la saca del flujo normal y la posiciona fija */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* la mueve justo al centro */
+  
   background: white;
   padding: 40px 50px;
   border-radius: 15px;
@@ -68,6 +72,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
 
 .carta h1 {
   color: #e91e63;
