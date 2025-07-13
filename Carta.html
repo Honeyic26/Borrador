@@ -62,8 +62,13 @@ window.addEventListener('popstate', function(event) {
 });
 
     function mostrarMensaje() {
-  const mensaje = document.getElementById('mensaje-personalizado');
-  mensaje.style.display = 'block';
+  const ventana = document.getElementById('ventana-no');
+  ventana.style.display = 'block';
+}
+
+function cerrarVentanaNo() {
+  document.getElementById('ventana-no').style.display = 'none';
+}
 
   setTimeout(() => {
     mensaje.style.display = 'none';
