@@ -52,28 +52,17 @@ function mostrarMensaje() {
   document.getElementById('bienvenida').style.display = 'none';
   document.getElementById('contenido-carta').style.display = 'none';
 
-  // Muestra ventana "No"
-  document.getElementById('ventana-no').style.display = 'block';
-}
-
-function mostrarMensaje() {
+  // Muestra ventana "No" con animación
   const ventana = document.getElementById('ventana-no');
   ventana.style.display = 'block';
-  ventana.classList.add('fadeIn'); // ⬅️ aquí le agregas la animación
+  ventana.classList.add('fadeIn');
 }
 
 function cerrarVentanaNo() {
   const ventana = document.getElementById('ventana-no');
   ventana.style.display = 'none';
-  ventana.classList.remove('fadeIn'); // ⬅️ así puedes volver a mostrarla luego
+  ventana.classList.remove('fadeIn'); // Por si quieres mostrarla de nuevo más adelante
 }
-
-// Detectar botón atrás del navegador para volver a bienvenida
-window.addEventListener('popstate', function(event) {
-  document.getElementById('contenido-carta').style.display = 'none';
-  document.getElementById('ventana-no').style.display = 'none';
-  document.getElementById('bienvenida').style.display = 'flex';
-});
 
 </script>
 </body>
